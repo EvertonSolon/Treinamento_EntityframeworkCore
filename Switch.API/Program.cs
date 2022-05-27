@@ -1,4 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using Switch.Infra.Data.Context;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<SwitchContext>(options =>
+            options.UseLazyLoadingProxies()
+            .UseSqlServer(builder.Configuration.GetConnectionString("SwitchDB"),
+             b => b.MigrationsAssembly(typeof(SwitchContext).Assembly.FullName)));
+
+builder.Services.AddMvcCore();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
