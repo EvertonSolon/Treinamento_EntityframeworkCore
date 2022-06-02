@@ -13,7 +13,7 @@ namespace Switch.Domain.Entities
         public TipoDocumentoEnum TipoDocumento { get; set; }
         public string Numero { get; set; }
 
-        //Propriedade de relacionamento com Usuario
+        //Propriedade UsuarioId será uma fk de relacionamento com Id do Usuario
         public int UsuarioId { get; set; }
 
         //Propriedade de navegação para obter informações do objeto Usuario
