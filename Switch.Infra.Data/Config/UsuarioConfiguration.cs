@@ -37,7 +37,10 @@ namespace Switch.Infra.Data.Config
 
             builder.HasMany(x => x.Postagens).WithOne(y => y.Usuario);
             builder.HasMany(x => x.Comentarios).WithOne(y => y.Usuario);
-            //builder.HasMany(x => x.UsuariosGrupos).WithOne(x => x.Usuario);
+            builder.HasMany(u => u.Amigos).WithOne(a => a.Usuario).OnDelete(DeleteBehavior.NoAction);
+            builder.HasMany(x => x.UsuariosGrupos).WithOne(x => x.Usuario);
+            builder.HasOne(u => u.StatusRelacionamento);
+            builder.HasOne(u => u.ProcurandoPor);
         }
     }
 }

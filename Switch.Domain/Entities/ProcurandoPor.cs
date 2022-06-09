@@ -39,12 +39,5 @@ namespace Switch.Domain.Entities
                 return Id == (int)ProcurandoPorEnum.RelacionamentoSerio;
             }
         }
-        public bool NãoEspecificado
-        {
-            get
-            {
-                return Id == (int)ProcurandoPorEnum.NaoEspecificado;
-            }
-        }
     }
 }
