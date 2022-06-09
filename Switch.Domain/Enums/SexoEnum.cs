@@ -8,8 +8,8 @@ namespace Switch.Domain.Enums
 {
     public enum SexoEnum
     {
-        NaoDefinico,
-        Feminino,
-        Masculino
+        NaoDefinico = 1,
+        Feminino = 2,
+        Masculino = 3
     }
 }

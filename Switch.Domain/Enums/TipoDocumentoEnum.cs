@@ -8,8 +8,8 @@ namespace Switch.Domain.Enums
 {
     public enum TipoDocumentoEnum
     {
-        NaoDefinico,
-        Cpf,
-        Rg
+        NaoDefinico = 1,
+        Cpf = 2,
+        Rg = 3
     }
 }
