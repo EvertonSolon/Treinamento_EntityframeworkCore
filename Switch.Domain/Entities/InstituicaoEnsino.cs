@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace Switch.Domain.Entities
 {
-    public class Postagem
+    public class InstituicaoEnsino
     {
         public int Id { get; set; }
-        public DateTime DataPublicacao { get; set; }
-        public string Texto { get; set; }
-        
         public int UsuarioId { get; set; }
         public virtual Usuario Usuario { get; set; }
-
-        public int GrupoId { get; set; }
-        public virtual Grupo Grupo { get; set; }
-
-        public string UrlConteudo { get; set; }
+        public string Nome { get; set; }
+        public DateTime? AnoFormacao { get; set; }
 
     }
 }
