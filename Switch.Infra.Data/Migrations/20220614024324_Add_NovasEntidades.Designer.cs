@@ -12,8 +12,8 @@ using Switch.Infra.Data.Context;
 namespace Switch.Infra.Data.Migrations
 {
     [DbContext(typeof(SwitchContext))]
-    [Migration("20220609190300_Adicao_NovasEntidades")]
-    partial class Adicao_NovasEntidades
+    [Migration("20220614024324_Add_NovasEntidades")]
+    partial class Add_NovasEntidades
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -225,6 +225,28 @@ namespace Switch.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProcurandoPor");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Descricao = "NaoEspecificado"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Descricao = "Namoro"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Descricao = "Amizade"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Descricao = "RelacionamentoSerio"
+                        });
                 });
 
             modelBuilder.Entity("Switch.Domain.Entities.StatusRelacionamento", b =>
@@ -288,7 +310,7 @@ namespace Switch.Infra.Data.Migrations
                         .HasMaxLength(400)
                         .HasColumnType("nvarchar(400)");
 
-                    b.Property<int>("ProcurandoPorId")
+                    b.Property<int?>("ProcurandoPorId")
                         .HasColumnType("int");
 
                     b.Property<string>("Senha")
@@ -304,7 +326,7 @@ namespace Switch.Infra.Data.Migrations
                         .HasMaxLength(400)
                         .HasColumnType("nvarchar(400)");
 
-                    b.Property<int>("StatusRelacionamentoId")
+                    b.Property<int?>("StatusRelacionamentoId")
                         .HasColumnType("int");
 
                     b.Property<string>("UrlFoto")
@@ -428,15 +450,11 @@ namespace Switch.Infra.Data.Migrations
                 {
                     b.HasOne("Switch.Domain.Entities.ProcurandoPor", "ProcurandoPor")
                         .WithMany()
-                        .HasForeignKey("ProcurandoPorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProcurandoPorId");
 
                     b.HasOne("Switch.Domain.Entities.StatusRelacionamento", "StatusRelacionamento")
                         .WithMany()
-                        .HasForeignKey("StatusRelacionamentoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("StatusRelacionamentoId");
 
                     b.Navigation("ProcurandoPor");
 

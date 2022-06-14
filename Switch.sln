@@ -15,19 +15,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-API", "4-API", "{F8400DD8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Presentation", "5-Presentation", "{3AB3A05D-86D7-45D1-B4B0-A4F753A341FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.Domain", "Switch.Domain\Switch.Domain.csproj", "{0B88D416-B64A-479A-B790-37CBEC2EB99B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Switch.Domain", "Switch.Domain\Switch.Domain.csproj", "{0B88D416-B64A-479A-B790-37CBEC2EB99B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.Domain.Tests", "Switch.Domain.Tests\Switch.Domain.Tests.csproj", "{760FEDFB-D2A3-4C4A-A2FE-24D167FD9B07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Switch.Domain.Tests", "Switch.Domain.Tests\Switch.Domain.Tests.csproj", "{760FEDFB-D2A3-4C4A-A2FE-24D167FD9B07}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1-CrossCutting", "2.1-CrossCutting", "{4DEB33E3-D115-499F-B537-67A80E198C70}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.2-Data", "2.2-Data", "{205D0770-9C56-4349-ACD8-2477E22DFCCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.Infra.Data", "Switch.Infra.Data\Switch.Infra.Data.csproj", "{A7B5B52C-D53D-4BEB-927F-D80E86FB0B08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Switch.Infra.Data", "Switch.Infra.Data\Switch.Infra.Data.csproj", "{A7B5B52C-D53D-4BEB-927F-D80E86FB0B08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.Application", "Switch.Application\Switch.Application.csproj", "{492E2E3D-9A4B-465B-85F7-AC88E7C0A50A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Switch.Application", "Switch.Application\Switch.Application.csproj", "{492E2E3D-9A4B-465B-85F7-AC88E7C0A50A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch.API", "Switch.API\Switch.API.csproj", "{42C7D37F-C54B-4FA7-AC1B-70B0A9C1998B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Switch.API", "Switch.API\Switch.API.csproj", "{42C7D37F-C54B-4FA7-AC1B-70B0A9C1998B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{3A0F6542-C3D6-448E-BA50-29AD6F503A89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{42C7D37F-C54B-4FA7-AC1B-70B0A9C1998B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42C7D37F-C54B-4FA7-AC1B-70B0A9C1998B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42C7D37F-C54B-4FA7-AC1B-70B0A9C1998B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0F6542-C3D6-448E-BA50-29AD6F503A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0F6542-C3D6-448E-BA50-29AD6F503A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0F6542-C3D6-448E-BA50-29AD6F503A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0F6542-C3D6-448E-BA50-29AD6F503A89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{A7B5B52C-D53D-4BEB-927F-D80E86FB0B08} = {205D0770-9C56-4349-ACD8-2477E22DFCCD}
 		{492E2E3D-9A4B-465B-85F7-AC88E7C0A50A} = {DCD29C48-10B2-41BA-9E24-C7184ED3F5B7}
 		{42C7D37F-C54B-4FA7-AC1B-70B0A9C1998B} = {F8400DD8-1185-4225-BEA6-ECD95E23AE59}
+		{3A0F6542-C3D6-448E-BA50-29AD6F503A89} = {3AB3A05D-86D7-45D1-B4B0-A4F753A341FE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {25119E48-12E1-4864-98DB-5FB5CDAC8B4F}

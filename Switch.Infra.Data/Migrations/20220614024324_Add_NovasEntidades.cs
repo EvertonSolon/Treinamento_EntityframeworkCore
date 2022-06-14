@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Switch.Infra.Data.Migrations
 {
-    public partial class Adicao_NovasEntidades : Migration
+    public partial class Add_NovasEntidades : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,15 +13,13 @@ namespace Switch.Infra.Data.Migrations
                 name: "ProcurandoPorId",
                 table: "Usuarios",
                 type: "int",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
 
             migrationBuilder.AddColumn<int>(
                 name: "StatusRelacionamentoId",
                 table: "Usuarios",
                 type: "int",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
 
             migrationBuilder.AddColumn<string>(
                 name: "UrlConteudo",
@@ -132,6 +130,17 @@ namespace Switch.Infra.Data.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "ProcurandoPor",
+                columns: new[] { "Id", "Descricao" },
+                values: new object[,]
+                {
+                    { 1, "NaoEspecificado" },
+                    { 2, "Namoro" },
+                    { 3, "Amizade" },
+                    { 4, "RelacionamentoSerio" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "StatusRelacionamentos",
                 columns: new[] { "Id", "Descricao" },
                 values: new object[,]
@@ -177,16 +186,14 @@ namespace Switch.Infra.Data.Migrations
                 table: "Usuarios",
                 column: "ProcurandoPorId",
                 principalTable: "ProcurandoPor",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                principalColumn: "Id");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Usuarios_StatusRelacionamentos_StatusRelacionamentoId",
                 table: "Usuarios",
                 column: "StatusRelacionamentoId",
                 principalTable: "StatusRelacionamentos",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                principalColumn: "Id");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

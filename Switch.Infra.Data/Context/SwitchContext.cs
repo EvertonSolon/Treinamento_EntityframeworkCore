@@ -38,8 +38,8 @@ namespace Switch.Infra.Data.Context
 
             modelBuilder.ApplyConfiguration(new AmigoConfiguration());
             modelBuilder.ApplyConfiguration(new ComentarioConfiguration());
+            modelBuilder.ApplyConfiguration(new ProcurandoPorConfiguration());
             modelBuilder.ApplyConfiguration(new StatusRelacionamentoConfiguration());
-            modelBuilder.ApplyConfiguration(new GrupoConfiguration());
 
 
             base.OnModelCreating(modelBuilder);
