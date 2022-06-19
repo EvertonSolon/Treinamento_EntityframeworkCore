@@ -32,6 +32,7 @@ namespace Switch.Domain.Entities
             LocaisTrabalho = new List<LocalTrabalho>();
             InstituicoesEnsino = new List<InstituicaoEnsino>();
             Amigos = new List<Amigo>();
+            Comentarios = new List<Comentario>();
         }
 
     }

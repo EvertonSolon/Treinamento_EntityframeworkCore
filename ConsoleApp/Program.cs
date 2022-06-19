@@ -1,7 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Switch.Domain.Entities;
 using Switch.Domain.Enums;
+using Switch.Infra.CrossCutting.Logging;
 using Switch.Infra.Data.Context;
 
 
@@ -16,7 +19,7 @@ optionsBuilder.UseLazyLoadingProxies()
 
 
 var usuario = new Usuario { 
-                            Nome = "User 1", 
+                            Nome = "User 3", 
                             SobreNome = "SobrenomeUser",
                             Email = "user@teste.com",
                             Senha = "abc123",
@@ -28,8 +31,10 @@ try
 {
     using (var dbcontext = new SwitchContext(optionsBuilder.Options))
     {
+        //dbcontext.GetService<ILoggerFactory>().AddProvider(new Logger());
         dbcontext.Usuarios.Add(usuario);
         dbcontext.SaveChanges();
+        
     }
     
     Console.WriteLine("Sucesso ao inserir os dados!");
